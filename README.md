@@ -26,11 +26,11 @@
 * List all available commands for CLI mode: ./run list
 
 * Command for RSS management:
-    | Command  | Action  |
-    |---|---|
-    |./run page:list | List all fetched RSS pages in database |
-    |./run page:view {id or url} | View feeds of an existing RSS page or from a RSS url. Will return feeds from database if that URL is fetched (We don't fetch a URL in a same day twice) |
-    |./run page:remove {id} | Remove a fetched RSS page and its feeds from database |
+| Command           | Action                                                                                                                                                  |
+|-------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------|
+| ./run page:list   | List all fetched RSS pages in database                                                                                                                  |
+| ./run page:view   | View feeds of an existing RSS page or from a RSS url. Will return feeds from database if that URL is fetched (We don't fetch a URL in a same day twice) |
+| ./run page:remove | Remove a fetched RSS page and its feeds from database                                                                                                   |
 
 * (Optional) Setup a local domain name:
     - Edit /etc/hosts file: append "127.0.0.1 {{your_local_domain_name}}"
