@@ -26,6 +26,7 @@
 * List all available commands for CLI mode: ./run list
 
 * Command for RSS management:
+
 | Command           | Action                                                                                                                                                  |
 |-------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------|
 | ./run page:list   | List all fetched RSS pages in database                                                                                                                  |
