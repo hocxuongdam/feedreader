@@ -1,29 +1,40 @@
 ## How to start
-
-* cp /code/.env.example -> /code/.env
+* Clone this project and cd into feedreader folder
+* cp code/.env.example code/.env
 
 * Make "run" file executable:
     - chmod u+x run
 
 * Install dependencies:
- docker run --rm --interactive --tty -v $(pwd):/app -w /app composer install
+    - cd code
+    - docker run --rm --interactive --tty -v $(pwd):/app -w /app composer install
 
-* Start server:
-    - docker-compose up 
+* Back to feedreader directory and start server:
+    - docker-compose up -d
 
 * Change folder permissions:
-    - chmod 777 storage --recursive
+    - chmod 777 code/storage --recursive
     
 * Generate key:
     - ./run key:generate
+    
 * Migrate database:
     - ./run migrate
+    
+* Go to http://localhost/feed. Currently work best with Vnexpress RSS. Other RSS sources with different formats and structures may not work as expected (can be added later).
 
-* Setup a local domain name:
+* List all available commands for CLI mode: ./run list
+
+* Command for RSS management:
+    ./run page:list | List all fetched RSS pages in database
+    ./run page:view {id or url} | View feeds of an existing RSS page or from a RSS url. Will return feeds from database if that URL is fetched (We don't fetch a URL in a same day twice)
+    ./run page:remove {id} | Remove a fetched RSS page and its feeds from database
+
+* (Optional) Setup a local domain name:
     - Edit /etc/hosts file: append "127.0.0.1 {{your_local_domain_name}}"
     - Open  {{your_local_domain_name}}. It should shows homepage
 
-* Compile assets:
+* (For Dev) Compile assets:
     - docker-compose exec php bash
     - npm run watch
     
