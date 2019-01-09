@@ -1,0 +1,50 @@
+// Fonts
+@import url('https://fonts.googleapis.com/css?family=Nunito');
+
+// Variables
+@import 'variables';
+
+// Bootstrap
+@import '~bootstrap/scss/bootstrap';
+
+.navbar-laravel {
+  background-color: #fff;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.04);
+}
+.feedReader{
+  float: right;
+  border-left: 1px solid #ccc;
+  min-height:100vh;
+}
+.feedList{
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+  flex-basis: 150px;
+  justify-content: space-between;
+}
+.oneFeed{
+  display: block;
+  width: 100%;
+  margin-top: 15px;
+  padding-bottom: 15px;
+  border-bottom: 1px solid grey;
+}
+.feedThumbnail{
+  float: left;
+  margin-right: 10px;
+}
+.pageList{
+  float: left;
+  min-height:100vh;
+}
+/** for xs size */
+@media only screen and (max-width:48em) {
+  .feedReader{
+    min-height:40vh;
+  }
+  .pageList{
+    text-align: center;
+    min-height:60vh;
+  }
+}
