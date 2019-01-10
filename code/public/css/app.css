@@ -10527,6 +10527,25 @@ a.text-dark:focus {
   min-height: 100vh;
 }
 
+.onePage {
+  display: block;
+  border-bottom: 1px solid #bbb;
+  padding: 5px;
+  margin-bottom: 10px;
+}
+
+.onePage:hover {
+  background-color: #ddd;
+}
+
+.removePage {
+  display: none;
+}
+
+.onePage:hover > .removePage {
+  display: block;
+}
+
 /** for xs size */
 
 @media only screen and (max-width: 48em) {

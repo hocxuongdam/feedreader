@@ -48,7 +48,7 @@ class FeedController extends Controller
         try {
             [$page, $feeds] = $this->feedReader->read($url);
         } catch (InvalidUrlException $exception) {
-            $viewData['error'] = 'Invalid RSS source';
+            $viewData['error'] = 'Please input a valid RSS source';
             return view('feed.index')->with($viewData);
         }
 

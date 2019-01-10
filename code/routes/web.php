@@ -18,3 +18,4 @@ Route::get('/', function () {
 Route::resource('post', 'PostController');
 
 Route::get('/feed', 'FeedController@index');
+Route::get('/page/remove/{id}', 'PageController@destroy');
