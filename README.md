@@ -21,7 +21,9 @@
 * Migrate database:
     - ./run migrate
     
-* Go to http://localhost/feed. Currently work best with Vnexpress RSS. Other RSS sources with different formats and structures may not work as expected (can be added later).
+* Go to http://localhost/feed. Currently work best with Vnexpress RSS. Other RSS sources with different formats and structures may not work as expected (can be added later). 
+
+* Hover a page on the left panel to show its corresponding "Remove" button. Click to remove (currently there are no confirmation dialog).
 
 * List all available commands for CLI mode: ./run list
 
